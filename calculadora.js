@@ -1,3 +1,6 @@
+//Bibliotecas
+const readline = require('readline');
+
 //Função para operação de soma
 function somar(a, b) {
     return a + b;
@@ -26,7 +29,7 @@ function validarNumero(numero) {
     }
 }
 
-// Função para calcular com base na operação
+//Função para calcular com base na operação
 function calcular(operacao, a, b) {
     switch (operacao) {
         case '+':
@@ -41,3 +44,14 @@ function calcular(operacao, a, b) {
             return "Operação inválida!";
     }
 }
+
+//Configuração do readline
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+//Teste R1
+rl.question('Digite o primeiro número: ', (num1) => {
+    console.log('número inserido: ', num1)
+});
