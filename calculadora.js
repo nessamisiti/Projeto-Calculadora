@@ -13,3 +13,12 @@ function dividir(a, b) {
     }
     return a / b;
 }
+
+function validarNumero(numero) {
+    const naoEhNumero = isNaN(numero);
+    if(naoEhNumero === true) {
+        return false;
+    } else {
+        return true;
+    }
+}
